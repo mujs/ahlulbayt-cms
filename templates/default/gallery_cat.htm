@@ -1,0 +1,7 @@
+<div class="going">» <a href="?act=gallery">معرض الصور</a> » {$cat.title}</div>
+<br />
+{section name=tp loop=$images}
+<div class="thumb_container">
+<div class="title_art" title=""><img alt="" src="templates/default/images/title_art.gif" border="0" hspace="3" /><a href="?act=gallery&show=image&id={$images[tp].id}" class="cat_link">{$images[tp].title}</a></div>
+</div>
+{/section}

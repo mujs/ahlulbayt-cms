@@ -1,0 +1,8 @@
+<div class="going">» الأقسام » {$cat.title}</div>
+<br />
+{section name=tp loop=$posts}
+<div class="row_container">
+<div class="title_art" title=""><img alt="" src="templates/default/images/title_art.gif" border="0" hspace="3" /><a href="?act=posts&show=post&id={$posts[tp].id}" class="cat_link">{$posts[tp].title}</a></div>
+<div class="small_info">تاريخ الإضافة: - | عدد القراءات: {$posts[tp].views} | عدد التعليقات: 0</div>
+</div>
+{/section}

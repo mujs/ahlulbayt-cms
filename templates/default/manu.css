@@ -1,0 +1,65 @@
+.menulist_r, .menulist_r ul {
+ margin: 0;
+ padding: 0;
+ width: 164px;
+ list-style: none;
+ font:bold 15px arial;
+ z-index: 4;
+}
+
+.menulist_r ul {
+ display: none;
+ position: absolute;
+ top: -1px;
+ right: 162px;
+}
+
+.menulist_r li {
+ position: relative;
+ border-bottom: solid 1px #7b9335;
+ border-top: solid 1px #c2dd56;
+ }
+ 
+.menulist_r ul>li:last-child {
+ margin-bottom: 1px; /* Mozilla fix */
+}
+
+.menulist_r a,.menulist_r a:visited,.menulist_r a:active {
+ display: block;
+ padding: 3px;
+ color:#FFF;
+ text-decoration: none;
+ direction: rtl;
+ padding-right: 20px;
+}
+
+.menulist_r a:hover,  .menulist_r a.highlighted:hover, .menulist_r a:focus {
+ color:#cfef96;
+ background: url('images/menu_h.gif') no-repeat right;
+}
+
+.menulist_r a.highlighted {
+ background: url('images/menu_h.gif') no-repeat right;
+ background-position: top;
+ background-repeat: no-repeat; 
+}
+
+.menulist_r a .subind {
+ float: left;
+}
+
+
+*:first-child+html .menulist_r li {
+ float: right;
+ width: 100%;
+}
+
+* html .menulist_r li {
+ float: right;
+/* height: 1%;*/
+ height: 26px;
+}
+
+* html .menulist_r a {
+ height: 1%;
+}

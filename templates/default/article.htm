@@ -1,0 +1,46 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#comment_submit").click(function() {
+		$.article(
+			"articles.php?action=add_comment",
+			$("#comment_form").serialize(),
+            function(data) {
+                $("#comment_form_notif").fadeOut().fadeIn().html(data);
+                //$("#comment_submit").removeClass("loading");
+			}
+		);
+	});
+});
+</script>
+<div class="going">» الأقسام » <a href="?act=articles&show=cat&id={$article.cat_id}">{$article.cat_title}</a> » {$article.title} <a href="javascript:window.print()"><img alt="طباعة" border="0" src="templates/default/images/print.gif" align="left" /></a></div>
+<br />
+<div class="info_container">
+<div class="page_title" title="">{$article.title}</div>
+<div class="small_info">تاريخ الإضافة: - | عدد القراءات: {$article.views} | عدد التعليقات: 0</div>
+</div>
+<br />
+<div class="artext">
+{$article.article}
+</div>
+<br /><br />
+<a href="javascript:scroll(0,0)"><img alt="أعلى الصفحة" src="templates/default/images/top_page.gif" align="left" border="0" /></a><br />
+<div style="border-top: 1px solid rgb(241, 241, 241); margin-top: 10px;">
+<font color="#666666">
+المصدر: {$article.source}
+</font>
+</div>
+<br /><br />
+<div id="comment">
+<div class="info_container">
+<div class="page_title" title="">التعليقات &laquo;{$article.num_comments}&raquo;</div>
+</div>
+<form action="" method="post">
+<table width="100%" cellpadding="0" cellspacing="1">
+<tr><td width="30%" class="td_title">الاسم</td><td><input type="text" name="name" style="width: 300px;" /></td></tr>
+<tr><td class="td_title">البريد الإلكتروني</td><td><input type="text" name="email" style="width: 300px;" /></td></tr>
+<tr><td class="td_title">التعليق</td><td><textarea name="comment" style="width: 300px; height: 100px;"></textarea></td></tr>
+<tr><td class="td_title">كود التحقق</td><td><input type="text" name="captcha" style="width: 300px;" /></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" id="comment_submit" value="إرسال" /></td></tr>
+</table>
+</form>
+</div>
