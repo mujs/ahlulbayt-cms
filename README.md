@@ -1,4 +1,4 @@
-# Ahlulbayt Portal
+# Ahlulbayt CMS
 
 A modernized PHP web application for managing articles, pages, links, and gallery content, with a focus on best practices, security, and maintainability. This project has been refactored from a legacy codebase to incorporate modern PHP standards.
 
