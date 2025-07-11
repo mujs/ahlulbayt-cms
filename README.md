@@ -28,8 +28,8 @@ Follow these steps to get the project up and running on your local machine.
 1.  **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/YOUR_USERNAME/ahlulbayt-portal.git
-    cd ahlulbayt-portal
+    git clone https://github.com/mujs/ahlulbayt-cms.git
+    cd ahlulbayt-cms
     ```
 
 2.  **Install Composer Dependencies:**
